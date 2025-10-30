@@ -1,25 +1,58 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title || "Mathew Portfolio" %></title>
-    <link rel="stylesheet" href="/stylesheets/style.css">
-  </head>
-  <body>
-    <nav>
-      <a href="/">Home</a> |
-      <a href="/about">About</a> |
-      <a href="/projects">Projects</a> |
-      <a href="/contact">Contact</a>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title><%= typeof title !== 'undefined' ? title + ' · ' : '' %>Mathew Arogbo</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="brand" href="/">
+        <img class="brand__avatar" src="/images/picture.jpeg" alt="Mathew Arogbo">
+        <span class="brand__name">Mathew</span>
+      </a>
+      <div class="menu">
+        <a href="/"        class="<%= active==='home' ? 'active' : '' %>">Home</a>
+        <a href="/contact" class="<%= active==='contact' ? 'active' : '' %>">Contact</a>
+        <a href="/projects"class="<%= active==='projects' ? 'active' : '' %>">Projects</a>
+        <a href="/about"   class="<%= active==='about' ? 'active' : '' %>">About</a>
+      </div>
     </nav>
+  </header>
 
-    <hr>
-
+  <main class="container">
     <%- body %>
+  </main>
 
-    <hr>
+  <footer class="container" style="padding:40px 0;opacity:.7">
+    © <%= new Date().getFullYear() %> Mathew Arogbo
+  </footer>
 
-    <footer>
-      <p>© <%= new Date().getFullYear() %> Mathew Arogbo</p>
-    </footer>
-  </body>
+  <script>
+  (function () {
+    const nav = document.querySelector('.nav');
+    if (!nav) return;
+    const cursor = document.createElement('span');
+    cursor.className = 'menu-cursor';
+    nav.appendChild(cursor);
+    const links = Array.from(document.querySelectorAll('.menu a'));
+    function moveTo(el){
+      const navBox = nav.getBoundingClientRect();
+      const box = el.getBoundingClientRect();
+      cursor.style.width = box.width + 'px';
+      cursor.style.transform = `translateX(${box.left - navBox.left}px)`;
+      cursor.style.opacity = 1;
+    }
+    links.forEach(a=>{
+      a.addEventListener('mouseenter',()=>moveTo(a));
+      a.addEventListener('focus',()=>moveTo(a));
+    });
+    nav.addEventListener('mouseleave',()=>{ cursor.style.opacity = 0; });
+    const current = links.find(a=>a.classList.contains('active'));
+    if (current) moveTo(current);
+  })();
+  </script>
+</body>
 </html>

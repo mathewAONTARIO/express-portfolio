@@ -1,20 +1,10 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 
-router.get('/', (req, res) => {
-  res.render('home');
-});
-
-router.get('/about', (req, res) => {
-  res.render('about');
-});
-
-router.get('/projects', (req, res) => {
-  res.render('projects');
-});
-
-router.get('/contact', (req, res) => {
-  res.render('contact');
-});
+router.get('/',        (req,res)=>res.render('home',     { title: 'Home' }));
+router.get('/about',   (req,res)=>res.render('about',    { title: 'About' }));
+router.get('/projects',(req,res)=>res.render('projects', { title: 'Projects' }));
+router.get('/contact', (req,res)=>res.render('contact',  { title: 'Contact' }));
 
 module.exports = router;
+

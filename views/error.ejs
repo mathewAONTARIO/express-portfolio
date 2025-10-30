@@ -1,3 +1,38 @@
-<h1><%= message %></h1>
-<h2><%= error.status %></h2>
-<pre><%= error.stack %></pre>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Error</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="/stylesheets/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="/">
+          <img class="brand__avatar" src="/images/avatar.png" alt="Mathew" />
+          <span class="brand__name">Mathew</span>
+        </a>
+        <nav class="menu">
+          <a href="/"        class="<%= (typeof path !== 'undefined' && path === '/') ? 'active' : '' %>">Home</a>
+          <a href="/about"   class="<%= (typeof path !== 'undefined' && path === '/about') ? 'active' : '' %>">About</a>
+          <a href="/projects"class="<%= (typeof path !== 'undefined' && path === '/projects') ? 'active' : '' %>">Projects</a>
+          <a href="/contact" class="<%= (typeof path !== 'undefined' && path === '/contact') ? 'active' : '' %>">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <h1>Something went wrong</h1>
+      <p class="lead"><%= message %></p>
+
+      <% if (error && error.stack) { %>
+        <pre style="white-space:pre-wrap;"><%= error.stack %></pre>
+      <% } %>
+    </main>
+
+    <footer class="container" style="margin-top:48px;opacity:.7">
+      <small>© <%= new Date().getFullYear() %> Mathew Arogbo</small>
+    </footer>
+  </body>
+</html>

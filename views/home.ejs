@@ -1,2 +1,87 @@
-<h1>Mathew Arogbo</h1>
-<p>Welcome to my portfolio website.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home – Mathew Arogbo</title>
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-Tj8C+W4dq2CuwkK6FzG5QZ+VYh1soC+6bb+FT+Ksp3hxGxPPC2TKwRzZxzzFf9CWXzLzMvEGL7U1xSmjvKk3ag=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <!-- Your main CSS -->
+  <link rel="stylesheet" href="/styles/style.css">
+</head>
+
+<body>
+  <section class="hero">
+    <div class="hero-card">
+      <img
+        class="hero-avatar"
+        src="/images/picture.jpeg"
+        alt="Mathew Arogbo"
+      >
+
+      <div class="hero-main">
+        <h1 class="hero-title">Mathew Arogbo</h1>
+        <p class="hero-subtitle">
+          Networking &amp; IT Security student
+        </p>
+
+        <ul class="hero-meta">
+          <li><span style="opacity:.8; font-size:14px;">📍 Ontario, Canada</span></li>
+          <li><span style="opacity:.8; font-size:14px;">🛡 Blue team / SOC / threat hunting</span></li>
+          <li><span style="opacity:.8; font-size:14px;">🔐 Cisco · Packet Tracer · Linux · Python · Express</span></li>
+        </ul>
+
+        <div class="hero-cta">
+          <a class="btn-accent" href="/projects">See Projects</a>
+
+          <div class="hero-socials">
+            <a
+              class="icon github"
+              href="https://github.com/mathewAONTARIO"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="GitHub"
+            >
+              <i class="fa-brands fa-github"></i>
+            </a>
+
+            <a
+              class="icon linkedin"
+              href="https://www.linkedin.com/feed/"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="LinkedIn"
+            >
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+
+            <a
+              class="icon instagram"
+              href="https://www.instagram.com/1800thew/"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Instagram"
+            >
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer
+    class="container"
+    style="padding:40px 0;opacity:.7;border-top:1px solid var(--divider);margin-top:40px;text-align:center;font-size:14px;color:var(--muted);"
+  >
+    © <%= new Date().getFullYear() %> Mathew Arogbo
+  </footer>
+</body>
+</html>

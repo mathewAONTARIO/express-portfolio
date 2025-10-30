@@ -1,2 +1,98 @@
-<h1>Projects</h1>
-<p>Network Design Project, Leadership Collaboration, etc.</p>
+<main class="projects-container">
+  <h1 class="page-title">Projects</h1>
+
+  <div class="project-item">
+    <h2>Network Design (3-Building)</h2>
+    <p>VLSM, VLANs, static routes; Packet Tracer lab with verification pings.</p>
+  </div>
+
+  <div class="project-item">
+    <h2>Secure Device Config</h2>
+    <p>AAA, SSH, banner/legal, strong passwords; config hardening checklist.</p>
+  </div>
+
+  <div class="project-item">
+    <h2>Express Portfolio</h2>
+    <p>This site — EJS views, routes, layout, deployed from GitHub.</p>
+  </div>
+
+  <div class="project-item">
+    <h2>
+      <a href="https://github.com/mathewAONTARIO/Personal-Portfolio-Website" 
+         target="_blank" rel="noopener">
+         Personal Portfolio Website
+      </a>
+    </h2>
+    <p>HTML5 + CSS3 portfolio of academic and technical work (GitHub Pages).</p>
+  </div>
+</main>
+
+<footer class="container about-footer">
+  © <%= new Date().getFullYear() %> Mathew Arogbo
+</footer>
+
+<style>
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: #111;
+    color: #eaeaea;
+    margin: 0;
+    padding: 0;
+  }
+
+  .projects-container {
+    max-width: 900px;
+    margin: 80px auto;
+    padding: 20px;
+  }
+
+  .page-title {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 10px;
+  }
+
+  .project-item {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 20px 25px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+  }
+
+  .project-item:hover {
+    transform: translateY(-4px);
+    border-color: #ff66b2;
+    box-shadow: 0 0 12px rgba(255, 102, 178, 0.25);
+  }
+
+  .project-item h2 {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 8px;
+  }
+
+  .project-item p {
+    color: #aaa;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .project-item a {
+    color: #ff66b2;
+    text-decoration: none;
+  }
+
+  .project-item a:hover {
+    text-decoration: underline;
+  }
+
+  footer {
+    text-align: center;
+    color: #777;
+    font-size: 0.85rem;
+    padding: 40px 0 20px;
+  }
+</style>

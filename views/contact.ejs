@@ -1,2 +1,40 @@
-<h1>Contact Me</h1>
-<p>Email: mathew.arogbo@ontariotechu.net</p>
+<section class="contact container">
+  <div class="contact-head">
+    <h1 class="contact-title">Contact Me</h1>
+    <span class="contact-underline-pink"></span>
+    <p class="contact-sub">
+      Take a moment to connect with me — simply fill out the form below.
+    </p>
+  </div>
+
+  <div class="contact-panel sleek-card">
+    <form method="POST" action="mailto:arogbomathew@gmail.com" enctype="text/plain">
+      <div class="mb-3">
+        <div class="input-group">
+          <span class="input-group-text"><i class="fa-solid fa-user"></i></span>
+          <input type="text" name="name" class="form-control" placeholder="First & Last Name" required>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <div class="input-group">
+          <span class="input-group-text"><i class="fa-solid fa-envelope"></i></span>
+          <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+        </div>
+      </div>
+
+      <div class="mb-4">
+        <div class="input-group">
+          <span class="input-group-text"><i class="fa-solid fa-message"></i></span>
+          <textarea name="message" class="form-control" rows="6" placeholder="Your Message" required></textarea>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <button type="submit" class="btn-contact-modern">
+          <i class="fa-solid fa-paper-plane me-2"></i> SEND
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
