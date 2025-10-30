@@ -26,10 +26,6 @@
     <%- body %>
   </main>
 
-  <footer class="container" style="padding:40px 0;opacity:.7">
-    © <%= new Date().getFullYear() %> Mathew Arogbo
-  </footer>
-
   <script>
   (function () {
     const nav = document.querySelector('.nav');
@@ -37,7 +33,9 @@
     const cursor = document.createElement('span');
     cursor.className = 'menu-cursor';
     nav.appendChild(cursor);
+
     const links = Array.from(document.querySelectorAll('.menu a'));
+
     function moveTo(el){
       const navBox = nav.getBoundingClientRect();
       const box = el.getBoundingClientRect();
@@ -45,12 +43,17 @@
       cursor.style.transform = `translateX(${box.left - navBox.left}px)`;
       cursor.style.opacity = 1;
     }
-    links.forEach(a=>{
-      a.addEventListener('mouseenter',()=>moveTo(a));
-      a.addEventListener('focus',()=>moveTo(a));
+
+    links.forEach(a => {
+      a.addEventListener('mouseenter', () => moveTo(a));
+      a.addEventListener('focus', () => moveTo(a));
     });
-    nav.addEventListener('mouseleave',()=>{ cursor.style.opacity = 0; });
-    const current = links.find(a=>a.classList.contains('active'));
+
+    nav.addEventListener('mouseleave', () => {
+      cursor.style.opacity = 0;
+    });
+
+    const current = links.find(a => a.classList.contains('active'));
     if (current) moveTo(current);
   })();
   </script>
