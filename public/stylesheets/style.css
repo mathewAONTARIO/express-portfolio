@@ -425,7 +425,6 @@ textarea.form-control:focus {
   transform: translateY(-1px);
 }
 
-/* colored social icons */
 .hero-socials {
   display: flex;
   gap: 12px;
@@ -456,6 +455,19 @@ textarea.form-control:focus {
 .hero-socials .icon:hover {
   transform: translateY(-3px);
   box-shadow: 0 4px 12px rgba(255,110,166,0.3);
+}
+
+/* make sure SVGs/PNGs inside the squares render white and centered */
+.hero-socials .icon img {
+  width: 22px;
+  height: 22px;
+  filter: invert(1) brightness(1.4); /* force white */
+  display: block;
+}
+
+.hero-socials .icon:hover img {
+  transform: scale(1.1);
+  filter: invert(1) brightness(1.8);
 }
 
 .about-wrapper {
