@@ -1,7 +1,7 @@
 Mathew Arogbo – Express Portfolio
 
-Welcome to my Express portfolio site! My name is Mathew Arogbo, and I’m a Networking & IT Security student at Ontario Tech University. This project is a personal website I created to highlight the networking labs I've finished and the cybersecurity abilities I have developed over my academic career.  It shows my progress in integrating web development into my subject of study in addition to showcasing my technical projects and laboratories. 
-The site uses Node.js, Express.js, and EJS for server-side rendering. It’s styled with a custom dark theme built using Bootstrap 5, Font Awesome, and CSS3.
+Welcome to my Express portfolio site! My name is Mathew Arogbo, and I’m a Networking & IT Security student at Ontario Tech University. This project is a personal website I created to highlight the networking labs I have finished and the cybersecurity abilities I have developed over my academic career.  It shows my progress in integrating web development into my subject of study in addition to showcasing my technical projects and laboratories. 
+The site uses Node.js, Express.js, and EJS for server-side rendering. It is styled with a custom dark theme built using Bootstrap 5, Font Awesome, and CSS3.
 Each page (Home, About, Projects, Contact) is dynamically rendered using modular Express routes, and the whole application is deployed on Render.
 
 
@@ -40,8 +40,3 @@ Technologies that I Used
 │   └── contact.ejs
 └── /routes             
 
-About the Project 
-
-This portfolio enabled me to combine web development with cybersecurity principles including network architecture, secure setups, and best practices in a practical setting.
-
-It's a small but significant step toward my aim of becoming a security analyst—someone who can create, defend, and professionally represent systems online in addition to having a solid understanding of them.
