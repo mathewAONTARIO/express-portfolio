@@ -40,7 +40,8 @@ Technologies that I Used
 │   └── contact.ejs
 └── /routes             
 
-Abut the Project 
+About the Project 
+
 This portfolio enabled me to combine web development with cybersecurity principles including network architecture, secure setups, and best practices in a practical setting.
 
 It's a small but significant step toward my aim of becoming a security analyst—someone who can create, defend, and professionally represent systems online in addition to having a solid understanding of them.
